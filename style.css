@@ -20,6 +20,7 @@ header>.nav-logo {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
 
 .nav-logo h1 {
@@ -84,7 +85,7 @@ header>.nav-logo {
     opacity: 0.7;
 }
 
-.hero-btn button {
+.primary-btn button {
     padding: 2vh 5vh;
     border-radius: 2vh;
     border: none;
@@ -96,11 +97,11 @@ header>.nav-logo {
     overflow: hidden;
 }
 
-.hero-btn button:hover {
+.primary-btn button:hover {
     color: tomato;
 }
 
-.hero-btn button:before {
+.primary-btn button:before {
     position: absolute;
     content: '';
     background-color: black;
@@ -116,12 +117,56 @@ header>.nav-logo {
     z-index: -2;
 }
 
-.hero-btn button:hover::before {
+.primary-btn button:hover::before {
     transform: translateX(0.5vh);
 }
 
 .hero-img img {
     width: 100%;
+    border-radius: 1vh;
+}
+
+/* ------------------------------------------------------------------------------------ */
+/* Features Styles */
+
+.features {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vw;
+    padding: 3vh 5vh;
+}
+
+.features-left,
+.features-right {
+    width: 50%;
+}
+
+.features-left {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vh;
+}
+
+.features-left img {
+    width: 100%;
+    border-radius: 1vh;
+}
+
+.features-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5vh;
+    padding: 0vh 5vh;
+}
+
+.features-title {
+    font-size: 3rem;
+    align-items: end;
 }
 
 /* ------------------------------------------------------------------------------------ */
@@ -150,7 +195,12 @@ header>.nav-logo {
         backdrop-filter: blur(1vh);
         position: absolute;
         transform: translate(100%);
-        z-index: 0;
+        z-index: 11;
+    }
+
+    .nav-logo {
+        position: relative;
+        z-index: 10;
     }
 
     .nav-logo h1 {
@@ -188,7 +238,7 @@ header>.nav-logo {
         position: absolute;
         top: 6.5vh;
         right: 1vh;
-        z-index: 2;
+        z-index: 999;
         cursor: pointer;
     }
 
@@ -218,10 +268,10 @@ header>.nav-logo {
     /* Hero Styles */
 
     .hero {
-        position: absolute;
+        position: relative;
         top: 10vh;
-        padding: 7vh 1vh;
-        z-index: -1;
+        padding: 5vh 1vh;
+        z-index: 3;
     }
 
     .hero {
@@ -258,5 +308,27 @@ header>.nav-logo {
     }
 
     /* ------------------------------------------------------------------------------------ */
-    /* Hero Styles */
+    /* Features Styles */
+
+    .features {
+        flex-direction: column-reverse;
+        position: relative;
+        z-index: 4;
+        padding: 2vh 1vh;
+        gap: 3vh;
+        height: 80vh;
+    }
+
+    .features-left,
+    .features-right {
+        width: 100%;
+    }
+
+    .features-title {
+        font-size: 1.5rem;
+    }
+
+    .features-right {
+        padding: 0vh 1vh;
+    }
 }
