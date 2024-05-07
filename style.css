@@ -407,7 +407,7 @@ header>.nav-logo {
         flex-direction: column-reverse;
         position: relative;
         z-index: 4;
-        margin-top: 5vh;
+        margin-top: 7vh;
         padding: 0vh 1vh;
         gap: 5vh;
         height: 80vh;
@@ -443,10 +443,16 @@ header>.nav-logo {
     .lovenjoy-left {
         padding-top: 0vh;
         gap: 3vh;
+
+    }
+
+    .lovenjoy-title {
+        width: 200%;
     }
 
     .lovenjoy-title h1 {
-        font-size: 2rem;
+        font-size: 3rem;
+        
     }
 
     .lovenjoy-contents {
