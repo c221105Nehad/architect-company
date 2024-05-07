@@ -44,12 +44,6 @@ menu.addEventListener('click', function () {
             opacity: 0
         });
 
-        tl.from('.nav-btn button', {
-            y: 50,
-            opacity: 0,
-            duration: 0.4
-        });
-
         clicked = false;
 
     } else {

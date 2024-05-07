@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +14,18 @@ body {
     overflow-x: hidden;
 }
 
+
+.hero-title h1,
+.features-title h1,
+.lovenjoy-title h1,
+.facts-title h1,
+.sponsors-title h1 {
+    font-family: "Roboto Serif", serif;
+    /* font-family: "Roboto Condensed", sans-serif; */
+}
+
+
+
 .menu,
 header>.nav-logo {
     display: none;
@@ -17,7 +35,7 @@ header>.nav-logo {
 /* Header styles */
 
 .header {
-    background-color: rgba(220, 20, 60, 0.53);
+    background-color: #00A9FF;
     padding: 3vh 5vh;
     display: flex;
     flex-direction: row;
@@ -48,15 +66,22 @@ header>.nav-logo {
     font-weight: 500;
     font-size: 1.2rem;
     cursor: pointer;
+    font-family: "Roboto Condensed", sans-serif;
 }
 
 .nav-btn button {
     padding: 1vh 3vh;
     border-radius: 1vh;
-    border: 1px solid yellow;
-    background-color: aqua;
+    background-color: #89CFF3;
+    border: none;
     font-size: 1rem;
     cursor: pointer;
+    font-family: "Roboto Condensed", sans-serif;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-btn button:hover {
+    background-color: #CDF5FD;
 }
 
 /* ------------------------------------------------------------------------------------ */
@@ -92,22 +117,23 @@ header>.nav-logo {
     padding: 2vh 5vh;
     border-radius: 2vh;
     border: none;
-    background-color: rgba(255, 99, 71, 0.6);
+    background-color: #89CFF3;
     cursor: pointer;
     position: relative;
     transition: all 0.9s ease-in-out;
     z-index: 2;
     overflow: hidden;
+    font-family: "Roboto Condensed", sans-serif;
 }
 
 .primary-btn button:hover {
-    color: tomato;
+    color: white;
 }
 
 .primary-btn button:before {
     position: absolute;
     content: '';
-    background-color: black;
+    background-color: #00A9FF;
     position: absolute;
     top: 0;
     right: 0;
@@ -225,7 +251,7 @@ header>.nav-logo {
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
-    border: 2px solid black;
+    box-shadow: 2px 2px 4px 3px #CDF5FD;
     border-radius: 3vh;
 }
 
@@ -250,7 +276,7 @@ header>.nav-logo {
     padding: 5vh 7vh;
     bottom: -40vh;
     right: 60vh;
-    background-color: teal;
+    background-color: #A0E9FF;
     border-radius: 2vh;
 }
 
@@ -293,7 +319,7 @@ header>.nav-logo {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px solid black;
+    box-shadow: 2px 2px 4px 3px #CDF5FD;
     border-radius: 1vh;
 }
 
@@ -336,23 +362,26 @@ header>.nav-logo {
 footer {
     margin-top: 7vh;
     padding: 10vh 20vh;
-    background-color: yellow;
+    background-color: #CDF5FD;
     border-radius: 2vh;
 }
 
 .footer {
-    padding: 1vh;
+    padding: 3vh;
     width: 100%;
-    border: 2px solid blue;
+    background-color: #00A9FF;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Roboto Condensed", sans-serif;
+    border-radius: 2vh;
 }
 
 .footer p {
     font-weight: 600;
     font-size: 1.3rem;
 }
+
 /* ------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------ */
@@ -366,7 +395,7 @@ footer {
     /* Header styles */
 
     .header {
-        background-color: rgba(220, 20, 60, 0.53);
+        background-color: #00A9FF;
         padding: 5vh 1vh;
         flex-direction: column;
         margin-left: 50%;
@@ -404,6 +433,8 @@ footer {
 
     .nav-btn button {
         width: 70%;
+        opacity: 1;
+        transform: translate(0px, 1px);
     }
 
     header>.nav-logo {
@@ -498,7 +529,7 @@ footer {
         flex-direction: column-reverse;
         position: relative;
         z-index: 4;
-        margin-top: 7vh;
+        margin-top: 15vh;
         padding: 0vh 1vh;
         gap: 5vh;
         height: 80vh;
@@ -543,11 +574,14 @@ footer {
 
     .lovenjoy-title h1 {
         font-size: 3rem;
-        
     }
 
     .lovenjoy-contents {
         gap: 2vh;
+    }
+
+    .lovenjoy-contents-card {
+        box-shadow: 1px 1px 3px 2px #CDF5FD;
     }
 
     .lovenjoy-contents div {
@@ -565,15 +599,81 @@ footer {
         padding: 2vh 7vh;
         bottom: 55vh;
         right: 7vh;
-        background-color: teal;
+        background-color: #A0E9FF;
         border-radius: 2vh;
     }
-    
+
     .lovenjoy-float h1 {
         font-size: 2rem;
     }
-    
+
     .lovenjoy-float h5 {
         font-size: 1rem;
+    }
+
+    /* ------------------------------------------------------------------------------------ */
+    /* Facts Styles */
+
+    .facts {
+        gap: 5vh;
+        padding: 3vh 5vh;
+        margin-top: 30vh;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        padding: 5vh 1vh;
+    }
+
+    .facts-content {
+        gap: 1vh;
+    }
+
+    .fact-content-card {
+        box-shadow: 1px 1px 3px 2px #CDF5FD;
+    }
+
+    /* ------------------------------------------------------------------------------------ */
+    /* Sponsors Styles */
+
+    .sponsors {
+        padding: 5vh 1vh;
+        margin-top: 5vh;
+    }
+
+    .sponsors-cards {
+        gap: 3vh;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .sponsors-cards div {
+        width: 100%;
+    }
+
+    .sponsors-cards div:nth-child(1) {
+        padding-left: 5vh;
+      }
+
+    .sponsors-cards div:nth-child(2) {
+        padding-left: 15vh;
+      }
+
+      .sponsors-cards div:nth-child(3) {
+        padding-left: 25vh;
+      }
+
+      .sponsors-cards div:nth-child(4) {
+        padding-left: 35vh;
+      }
+
+      .sponsors-cards div:nth-child(5) {
+        padding-left: 45vh;
+      }
+
+    /* ------------------------------------------------------------------------------------ */
+    /* Footer Styles */
+
+    footer {
+        padding: 10vh;
     }
 }
